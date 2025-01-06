@@ -10,10 +10,10 @@ public class Recipe {
 
     @Id
     private String id;
+    @Indexed(unique = true)
     private String name;
     private List<String> ingredients;
     private String instructions;
-    @Indexed(unique = true)
     private String category;
 
     public Recipe(String name, List<String> ingredients, String instructions, String category) {
