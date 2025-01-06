@@ -8,9 +8,13 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 @Service
-public class RecipeService {
+public class RecipeServicev1 {
 
     private final RecipeRepository recipeRepository;
+
+    public RecipeServicev1(RecipeRepository recipeRepository) {
+        this.recipeRepository = recipeRepository;
+    }
 
     public List<Recipe> getAllRecipes() {
         return recipeRepository.findAll();

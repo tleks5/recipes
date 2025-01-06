@@ -12,7 +12,11 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class RecipeController {
 
-    private final RecipeService recipeService;
+    private final RecipeServicev1 recipeService;
+
+    public RecipeController(RecipeServicev1 recipeService) {
+        this.recipeService = recipeService;
+    }
 
     @GetMapping
     public List<Recipe> fetchAllRecipes() {
