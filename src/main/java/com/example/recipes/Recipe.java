@@ -2,6 +2,7 @@ package com.example.recipes;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
@@ -12,6 +13,7 @@ public class Recipe {
     private String name;
     private List<String> ingredients;
     private String instructions;
+    @Indexed(unique = true)
     private String category;
 
     public Recipe(String name, List<String> ingredients, String instructions, String category) {
