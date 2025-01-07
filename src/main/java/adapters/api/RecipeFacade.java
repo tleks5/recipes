@@ -1,8 +1,9 @@
 package adapters.api;
 
+import com.example.recipes.RecipeService;
 import com.example.recipes.RecipeServicev1;
 import domain.model.Recipe;
-import domain.ports.RecipeService;
+
 import org.springframework.stereotype.Component;
 
 @Component

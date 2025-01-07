@@ -16,9 +16,9 @@ public class RecipeEndpoint {
         this.recipes = recipes;
     }
 
-    @GetMapping("{recipeId}")
-    RecipeResponse get(@PathVariable("recipeId") final String recipeId) {
-        return recipes.get(recipeId);
+    @GetMapping("{recipeName}")
+    RecipeResponse get(@PathVariable("recipeName") final String recipeName) {
+        return recipes.get(recipeName);
     }
 
     @PostMapping

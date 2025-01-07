@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
 
-@AllArgsConstructor
-@Service
+// @AllArgsConstructor
+// @Service
 public class RecipeServicev1 {
 
     private final RecipeRepository recipeRepository;
@@ -16,7 +16,7 @@ public class RecipeServicev1 {
         this.recipeRepository = recipeRepository;
     }
 
-    public List<Recipe> getAllRecipes() {
+    public List<Recipe1> getAllRecipes() {
         return recipeRepository.findAll();
     }
 }
