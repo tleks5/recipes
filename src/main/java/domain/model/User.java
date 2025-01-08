@@ -14,10 +14,10 @@ public class User {
     private String email;
     private List<String> favoriteRecipes; 
 
-    public User(String username, String email, List<String> favoriteRecipes) {
+    public User(String username, String email) {
         this.username = username;
         this.email = email;
-        this.favoriteRecipes = favoriteRecipes;
+        this.favoriteRecipes = List.of();
     }
 
     public String getId() {

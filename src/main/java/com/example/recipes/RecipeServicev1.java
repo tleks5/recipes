@@ -16,7 +16,4 @@ public class RecipeServicev1 {
         this.recipeRepository = recipeRepository;
     }
 
-    public List<Recipe1> getAllRecipes() {
-        return recipeRepository.findAll();
-    }
 }

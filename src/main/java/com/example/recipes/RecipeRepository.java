@@ -20,4 +20,6 @@ public interface RecipeRepository extends MongoRepository<Recipe, String> {
     List<Recipe> findByIngredientsInSubsetOf(List<String> ingredients);
 
     List<Recipe> findByCategory(String category);
+
+    List<Recipe> findByAuthorId(String authorId);
 }

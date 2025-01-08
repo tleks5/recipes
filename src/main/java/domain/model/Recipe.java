@@ -15,13 +15,15 @@ public class Recipe {
     private List<String> ingredients;
     private String instructions;
     private String category;
+    private String authorId;
 
 
-    public Recipe(String name, List<String> ingredients, String instructions, String category) {
+    public Recipe(String name, List<String> ingredients, String instructions, String category, String authorId) {
         this.name = name;
         this.ingredients = ingredients;
         this.instructions = instructions;
         this.category = category;
+        this.authorId = authorId;
     }
 
     public String getId() {
@@ -63,6 +65,15 @@ public class Recipe {
     public void setCategory(String category) {
         this.category = category;
     }
+
+    public String getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(String authorId) {
+        this.authorId = authorId;
+    }
+
 }
 // package domain.model;
 

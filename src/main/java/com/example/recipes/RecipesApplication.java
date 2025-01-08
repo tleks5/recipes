@@ -19,29 +19,29 @@ public class RecipesApplication {
 		SpringApplication.run(RecipesApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner runner(
-		RecipeRepository repository, MongoTemplate mongoTemplate) {
-		return args -> {
-			Recipe recipe = new Recipe(
-				"Makowiec",
-				List.of("mąka", "jajka"),
-				"coś tam",
-				"Deser"
-			);
+	// @Bean
+	// CommandLineRunner runner(
+	// 	RecipeRepository repository, MongoTemplate mongoTemplate) {
+	// 	return args -> {
+	// 		Recipe recipe = new Recipe(
+	// 			"Makowiec",
+	// 			List.of("mąka", "jajka"),
+	// 			"coś tam",
+	// 			"Deser"
+	// 		);
 			
-			// usingMongoTemplateAndQuery(repository, mongoTemplate, recipe);
+	// 		// usingMongoTemplateAndQuery(repository, mongoTemplate, recipe);
 
-			repository.findByName(recipe.getName())
-				.ifPresentOrElse(
-					r -> System.out.println("Recipe already exists"),
-					() -> {
-						System.out.println("Inserting recipe " + recipe.getName());
-						repository.insert(recipe);
-					}
-				);
-		};
-	}
+	// 		repository.findByName(recipe.getName())
+	// 			.ifPresentOrElse(
+	// 				r -> System.out.println("Recipe already exists"),
+	// 				() -> {
+	// 					System.out.println("Inserting recipe " + recipe.getName());
+	// 					repository.insert(recipe);
+	// 				}
+	// 			);
+	// 	};
+	// }
 
 	// private void usingMongoTemplateAndQuery(RecipeRepository repository, MongoTemplate mongoTemplate, Recipe recipe) {
 

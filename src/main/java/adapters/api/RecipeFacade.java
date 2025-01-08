@@ -1,27 +1,27 @@
-package adapters.api;
+// package adapters.api;
 
-import com.example.recipes.RecipeService;
-import com.example.recipes.RecipeServicev1;
-import domain.model.Recipe;
+// import com.example.recipes.RecipeService;
+// import com.example.recipes.RecipeServicev1;
+// import domain.model.Recipe;
 
-import org.springframework.stereotype.Component;
+// import org.springframework.stereotype.Component;
 
-@Component
-public class RecipeFacade {
+// @Component
+// public class RecipeFacade {
 
-    private final RecipeService recipeService;
+//     private final RecipeService recipeService;
 
-    RecipeFacade(final RecipeService recipeService) {
-        this.recipeService = recipeService;
-    }
+//     RecipeFacade(final RecipeService recipeService) {
+//         this.recipeService = recipeService;
+//     }
 
-    RecipeResponse get(final String recipeId) {
-        final Recipe recipe = recipeService.get(RecipeId.of(recipeId));
-        return RecipeResponse.of(recipe);
-    }
+//     // RecipeResponse get(final String recipeId) {
+//     //     final Recipe recipe = recipeService.get(RecipeId.of(recipeId));
+//     //     return RecipeResponse.of(recipe);
+//     // }
 
-    RecipeIdResponse create(final RecipeRequest recipeRequest) {
-        final String recipeId = recipeService.create(recipeRequest.name(), articleRequest.title(), articleRequest.content());
-        return RecipeIdResponse.of(recipeId);
-    }
-}
+//     // RecipeIdResponse create(final RecipeRequest recipeRequest) {
+//     //     final String recipeId = recipeService.create(recipeRequest.name(), articleRequest.title(), articleRequest.content());
+//     //     return RecipeIdResponse.of(recipeId);
+//     // }
+// }
